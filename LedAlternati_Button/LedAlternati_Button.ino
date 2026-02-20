@@ -18,26 +18,22 @@ void loop() {
   bool stato_attuale = digitalRead(BUTTON);
 
   if(stato_precedente == HIGH && stato_attuale == LOW){
+
+    digitalWrite(LED_ROSSO, LOW);
+    digitalWrite(LED_VERDE, LOW);
+    digitalWrite(LED_BLU, LOW);
+
     if(led_attuale == 1){
       digitalWrite(LED_ROSSO, HIGH);
-      Serial.println("Evento: led rosso acceso");
-
-      digitalWrite(LED_VERDE, LOW);
-      digitalWrite(LED_BLU, LOW);
+      Serial.println("rosso");
     }
     if(led_attuale == 2){
       digitalWrite(LED_VERDE, HIGH);
-      Serial.println("Evento: led verde acceso");
-
-      digitalWrite(LED_ROSSO, LOW);
-      digitalWrite(LED_BLU, LOW);
+      Serial.println("verde");
     }
     if(led_attuale == 3){
       digitalWrite(LED_BLU, HIGH);
-      Serial.println("Evento: led blu acceso");
-
-      digitalWrite(LED_VERDE, LOW);
-      digitalWrite(LED_ROSSO, LOW);
+      Serial.println("blu");
     }
 
     if(led_attuale == 3){

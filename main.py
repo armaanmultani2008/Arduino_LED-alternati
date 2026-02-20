@@ -1,7 +1,7 @@
 import serial
 import datetime
 
-ser = serial.Serial("COM6", 9600)
+ser = serial.Serial("COM7", 9600)
 
 numero_evento = 0
 
